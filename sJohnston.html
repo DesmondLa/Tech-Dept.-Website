@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html scroll-behavior: smooth>
+  <head>
+      <meta charset="UTF-8">
+      <title>Tech Dept.</title>
+      <link rel="icon" type="image/x-icon" href="Photos/download-removebg-preview.png">
+      <style>
+          /* Reset default margin and padding for the header */
+          header {
+              margin: 0;
+              padding: 0;
+              background-color: rgba(170,39,62); /* Transparent background */
+              border: 2px solid #333; /* Border style */
+              color: #fff; /* Text color */
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              padding: 10px;
+          }
+
+          /* Style the logo or website title */
+          .logo a {
+              text-decoration: none;
+              color: #fff;
+              font-size: 24px;
+              font-weight: bold;
+          }
+
+          /*Style the website name section*/
+          .website-name{
+            font-size: 40px;
+            font-weight: bold;
+          }
+
+          /* Style the navigation menu */
+          nav ul {
+              list-style: none;
+              margin: 0;
+              padding: 0;
+              display: flex; /* Display navigation links in a row */
+          }
+
+          nav li {
+              margin: 0 20px; /* Adjust the spacing between menu items */
+              position: relative; /* Position relative for dropdown */
+          }
+
+          nav a {
+              text-decoration: none;
+              color: #fff;
+          }
+
+          /* Apply a different style when hovering over menu items */
+          nav a:hover {
+              text-decoration: underline;
+          }
+
+          /* Style for the dropdown menu */
+          .dropdown-content {
+              display: none;
+              position: absolute;
+              background-color: #333;
+              min-width: 160px;
+              z-index: 1;
+          }
+
+          .dropdown-content a {
+              color: #fff;
+              padding: 10px;
+              text-decoration: none;
+              display: block;
+          }
+
+          /* Show the dropdown menu on hover */
+          nav li:hover .dropdown-content {
+              display: block;
+          }
+      </style>
+  </head>
+  <body style="background-color:#eeeeee; 
+              background-size: cover; 
+              background-repeat: no-repeat;">
+      <header>
+          <div class="logo">
+              <a href="index.html"><img src="Photos/download-removebg-preview.png" width="50" height="50"></a>
+          </div>
+          <div class="website-name"><i>Tech Department</i></div>
+          <nav>
+              <ul>
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="about.html">About</a></li>
+                  <li>
+                      <a href="#">Teachers</a>
+                      <div class="dropdown-content">
+                          <a href="kBlack.html" style="color: white;"> K. Black </a>
+                          <a href="AlexKidd.html" style="color: white;"> A. Kidd </a>
+                          <a href="tCampbell.html" style="color: white;"> T. Campbell </a>
+                          <a href="sJamieson.html" style="color: white;"> S. Jamieson </a>
+                          <a href="sJhonston.html" style="color: white;"> S. Johnston </a>
+                          <a href="pMcdonough.html" style="color: white;"> P. McDonough </a>
+                          <a href="sSutcliff.html" style="color: white;"> S. Sutcliffe </a>
+                      </div>
+                  </li>
+                  <li><a href="contact.html">Contact</a></li>
+              </ul>
+          </nav> 
+        </header>
+    <header style="background-image: url('Photos/image2.jpg'); color: #fff; text-align: center; margin-top: 0; height: 300px; background-repeat: no-repeat"><h1 style="text-align: center; font-size: 80px;">  S. Johnston </h1></header>
+        <style>
+          body {
+            text-align: center;
+          }
+
+          .collapsible {
+            background-color: #777;
+            color: white;
+            cursor: pointer;
+            padding: 18px;
+            width: 80%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 30px;
+          }
+
+          .active, .collapsible:hover {
+            background-color: #555;
+          }
+
+          .collapsible:after {
+            content: '\002B';
+            color: white;
+            font-weight: bold;
+            float: right;
+            margin-left: 5px;
+          }
+
+          .active:after {
+            content: "\2212";
+          }
+
+          .content {
+            padding: 0 18px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+            background-color: #f1f1f1;
+            width: 80%; /* Adjust width as needed */
+            margin: auto; /* Center the content */
+          }
+        </style>
+      </head>
+      <body>
+
+      <h2 style="margin-right:70%">Courses Taught</h2>
+      <button class="collapsible">TDJ2OR - Technological Design</button>
+      <div class="content">
+        <p style="text-align: justify; font-size: 20px;">
+          This course provides students with opportunities to apply a design process to meet a variety of technological challenges. Students will research projects, create designs, build models and/or prototypes, and assess products and/or processes using appropriate tools, techniques, and strategies. Student projects may include designs for homes, vehicles, bridges, robotic arms, clothing, or other products. Students will develop an awareness of environmental and societal issues related to technological design, and learn about secondary and postsecondary education and training leading to careers in the field.
+        </p>
+      </div>
+        <button class="collapsible">TIJ1OR - Exploring Technologies</button>
+        <div class="content">
+          <p style="text-align: justify; font-size: 20px;">
+            This course enables students to further explore and develop technological knowledge and skills introduced in the elementary science and technology program. Students will be given the opportunity to design and create products and/or provide services related to the various technological areas or industries, working with a variety of tools, equipment, and software commonly used in industry. Students will develop an awareness of environmental and societal issues, and will begin to explore secondary and postsecondary education and training pathways leading to careers in technology-related fields.
+          </p>
+        </div>
+      <script>
+        document.addEventListener("DOMContentLoaded", function() {
+          var coll = document.getElementsByClassName("collapsible");
+
+          for (var i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function() {
+              var content = this.nextElementSibling;
+
+              console.log("Button:", this.innerText);
+              console.log("Content:", content);
+
+              if (content) {
+                content.style.maxHeight = content.style.maxHeight ? null : content.scrollHeight + "px";
+              }
+            });
+          }
+        });
+      </script>
+  </body>
+</html>

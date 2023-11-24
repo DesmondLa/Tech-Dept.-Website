@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html scroll-behavior: smooth>
+  <head>
+      <meta charset="UTF-8">
+      <title>Tech Dept.</title>
+      <link rel="icon" type="image/x-icon" href="Photos/download-removebg-preview.png">
+      <style>
+          /* Reset default margin and padding for the header */
+          header {
+              margin: 0;
+              padding: 0;
+              background-color: rgba(170,39,62); /* Transparent background */
+              border: 2px solid #333; /* Border style */
+              color: #fff; /* Text color */
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              padding: 10px;
+          }
+
+          /* Style the logo or website title */
+          .logo a {
+              text-decoration: none;
+              color: #fff;
+              font-size: 24px;
+              font-weight: bold;
+          }
+
+          /*Style the website name section*/
+          .website-name{
+            font-size: 40px;
+            font-weight: bold;
+          }
+
+          /* Style the navigation menu */
+          nav ul {
+              list-style: none;
+              margin: 0;
+              padding: 0;
+              display: flex; /* Display navigation links in a row */
+          }
+
+          nav li {
+              margin: 0 20px; /* Adjust the spacing between menu items */
+              position: relative; /* Position relative for dropdown */
+          }
+
+          nav a {
+              text-decoration: none;
+              color: #fff;
+          }
+
+          /* Apply a different style when hovering over menu items */
+          nav a:hover {
+              text-decoration: underline;
+          }
+
+          /* Style for the dropdown menu */
+          .dropdown-content {
+              display: none;
+              position: absolute;
+              background-color: #333;
+              min-width: 160px;
+              z-index: 1;
+          }
+
+          .dropdown-content a {
+              color: #fff;
+              padding: 10px;
+              text-decoration: none;
+              display: block;
+          }
+
+          /* Show the dropdown menu on hover */
+          nav li:hover .dropdown-content {
+              display: block;
+          }
+      </style>
+  </head>
+  <body style="background-color:#eeeeee; 
+              background-size: cover; 
+              background-repeat: no-repeat;">
+      <header>
+          <div class="logo">
+              <a href="index.html"><img src="Photos/download-removebg-preview.png" width="50" height="50"></a>
+          </div>
+          <div class="website-name"><i>Tech Department</i></div>
+          <nav>
+              <ul>
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="about.html">About</a></li>
+                  <li>
+                      <a href="#">Teachers</a>
+                      <div class="dropdown-content">
+                          <a href="kBlack.html" style="color: white;"> K. Black </a>
+                          <a href="AlexKidd.html" style="color: white;"> A. Kidd </a>
+                          <a href="tCampbell.html" style="color: white;"> T. Campbell </a>
+                          <a href="sJamieson.html" style="color: white;"> S. Jamieson </a>
+                          <a href="sJhonston.html" style="color: white;"> S. Johnston </a>
+                          <a href="pMcdonough.html" style="color: white;"> P. McDonough </a>
+                          <a href="sSutcliff.html" style="color: white;"> S. Sutcliffe </a>
+                      </div>
+                  </li>
+                  <li><a href="contact.html">Contact</a></li>
+              </ul>
+          </nav> 
+        </header>
+    <header style="background-image: url('Photos/image2.jpg'); color: #fff; text-align: center; margin-top: 0; height: 300px; background-repeat: no-repeat"><h1 style="text-align: center; font-size: 80px;">  S. Jamieson </h1></header>
+        <style>
+          body {
+            text-align: center;
+          }
+
+          .collapsible {
+            background-color: #777;
+            color: white;
+            cursor: pointer;
+            padding: 18px;
+            width: 80%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 30px;
+          }
+
+          .active, .collapsible:hover {
+            background-color: #555;
+          }
+
+          .collapsible:after {
+            content: '\002B';
+            color: white;
+            font-weight: bold;
+            float: right;
+            margin-left: 5px;
+          }
+
+          .active:after {
+            content: "\2212";
+          }
+
+          .content {
+            padding: 0 18px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+            background-color: #f1f1f1;
+            width: 80%; /* Adjust width as needed */
+            margin: auto; /* Center the content */
+          }
+        </style>
+      </head>
+      <body>
+
+      <h2 style="margin-right:70%">Courses Taught</h2>
+      <button class="collapsible">ICD2OR - Digital Technology and Innovations in the Changing World</button>
+      <div class="content">
+        <p style="text-align: justify; font-size: 20px;">
+          This course helps students develop cutting-edge digital technology and computer programming skills that will support them in contributing to and leading the global economic, scientific and societal innovations of tomorrow. Students will learn and apply coding concepts and skills to build hands-on projects and investigate artificial intelligence, cybersecurity, and other emerging digital technologies that connect to a wide range of fields and careers. Using critical thinking skills with a focus on digital citizenship, students will investigate the appropriate use and development of the digital technologies that they encounter every day, as well as the benefits and limitations of these technologies.
+        </p>
+      </div>
+        <button class="collapsible">ICS3CR - Introduction to Computer Programming</button>
+        <div class="content">
+          <p style="text-align: justify; font-size: 20px;">
+            This course introduces students to computer programming concepts and practices. Students will write and test computer programs, using various problem-solving strategies. They will learn the fundamentals of program design and apply a software development life-cycle model to a software development project. Students will also learn about computer environments and systems and explore environmental issues related to computers, safe computing practices, emerging technologies, and post-secondary opportunities in computer-related fields.
+          </p>
+        </div>
+        <button class="collapsible">ICS3UR - Introduction to Computer Science</button>
+        <div class="content">
+          <p style="text-align: justify; font-size: 20px;">
+            This course introduces students to computer science. Students will design software independently and as part of a team, using industry-standard programming tools and applying the software development life-cycle model. They will also write and use subprograms within computer programs. Students will develop creative solutions for various types of problems as their understanding of the computing environment grows. They will also explore environmental and ergonomic issues, emerging research in computer science, and global career trends in computer-related fields.
+          </p>
+        </div>
+        <button class="collapsible">ICS4CR - Computer Programming</button>
+        <div class="content">
+          <p style="text-align: justify; font-size: 20px;">
+            This course further develops students’ computer programming skills. Students will learn object-oriented programming concepts, create object-oriented software solutions and design graphical user interfaces. Student teams will plan and carry out a software development project using industry-standard programming tools and proper project management techniques. Students will also investigate ethical issues in computing and expand their understanding of environmental issues, emerging technologies and computer-related careers.
+          </p>
+        </div>
+        </div>
+        <button class="collapsible">ICS4UR - Computer Science</button>
+        <div class="content">
+          <p style="text-align: justify; font-size: 20px;">
+            This course enables students to further develop knowledge and skills in computer science. Students will use modular design principles to create complex and fully documented programs, according to industry standards. Student teams will manage a large software development project, from planning through to project review. Students will also analyse algorithms for effectiveness. They will investigate ethical issues in computing and further explore environmental issues, emerging technologies, areas of research in computer science, and careers in the field.
+          </p>
+        </div>
+      <script>
+        document.addEventListener("DOMContentLoaded", function() {
+          var coll = document.getElementsByClassName("collapsible");
+
+          for (var i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function() {
+              var content = this.nextElementSibling;
+
+              console.log("Button:", this.innerText);
+              console.log("Content:", content);
+
+              if (content) {
+                content.style.maxHeight = content.style.maxHeight ? null : content.scrollHeight + "px";
+              }
+            });
+          }
+        });
+      </script>
+  </body>
+</html>
