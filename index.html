@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html scroll-behavior: smooth>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
   <head>
     <meta charset="UTF-8">
     <title>Tech Dept.</title>
@@ -16,6 +17,7 @@
         max-width: 1000px;
         position: relative;
         margin: auto;
+        height: 100%;
       }
 
 /* The dots/circles */
@@ -178,11 +180,31 @@
         margin-left: 20px; /* Adjust as needed */
       }
 
-      img {
-        max-width: 100%;
-        height: auto;
-        border-radius: 8px; /* To match the box's border radius */
+
+      body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      width: 80%;
+      margin: 0 auto;
+      max-width: 1200px; /* Set a maximum width for larger screens */
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    @media screen and (max-width: 600px) {
+      /* Styles for screens with a width of 600 pixels or less */
+      .container {
+        width: 100%;
+        padding: 0 10px; /* Add some padding for small screens */
       }
+    }
     </style>
   </head>
   <body style="background-color:#eeeeee; 
@@ -223,8 +245,7 @@
         <div class="content">
           <p style="color: rgba(170,39,62); text-align: justify; font-size: 19px;"><b>The tech department at All Saints Catholic High School in Ottawa, Ontario, is the department that educates students about overall development in different major skills used in the real world. Find out more about each tech department on the About and Teacher sections.</b></p>
         <H1 style="color: rgb(0, 0, 0); text-align: justify;"> About Technology</H1>
-        <p style="color: rgba(170,39,62); text-align: justify; font-size: 19.4px;">  <b>Technology is the practical application of scientific knowledge to human life's goals, or, as it is sometimes referred to, the modification and manipulation of the human environment. Numerous changes have been brought about by technology in society and its surroundings. Technology has facilitated the growth of a leisure class and helped many nations achieve more developed economies, including the global economy of today. The Earth and its environment suffer from the depletion of natural resources and the production of undesired byproducts, or pollution, from several modern activities. <br> <br> "Technologia" is the Greek word from which technology originated. Technology is, broadly speaking, the way that civilization interacts with its instruments and crafts and the degree to which it has influence over its surroundings. The phrase is defined as "the practical application of knowledge, especially in a particular area" and "a capability given by the practical application of knowledge" by the Merriam-Webster dictionary.
-
+        <p style="color: rgba(170,39,62); text-align: justify; font-size: 19.4px;">  <b>Technology is the practical application of scientific knowledge to human life's goals, or, as it is sometimes referred to, the modification and manipulation of the human environment. Numerous changes have been brought about by technology in society and its surroundings. Technology has facilitated the growth of a leisure class and helped many nations achieve more developed economies, including the global economy of today. The Earth and its environment suffer from the depletion of natural resources and the production of undesired byproducts, or pollution, from several modern activities.
         </b></p>
         </div>
       </div>
