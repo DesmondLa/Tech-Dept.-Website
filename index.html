@@ -185,13 +185,15 @@
       height: auto;
     }
 
-    @media screen and (max-width: 600px) {
-      .container {
-        width: 100%;
-        padding: 0 10px;
-      }
+    .GeneratedMarquee {
+      font-family:'Comic Sans MS';
+      font: size 100%;;
+      line-height:1.3em;
+      color:#000000;
+      padding:0;
     }
-    </style>
+</style>
+
   </head>
   <body style="background-color:#eeeeee; 
               background-size: cover; 
@@ -231,7 +233,9 @@
         <div class="content">
           <p style="color: rgba(170,39,62); text-align: justify; font-size: 100%;"><b>The tech department at All Saints Catholic High School in Ottawa, Ontario, is the department that educates students about overall development in different major skills used in the real world. Find out more about each tech department on the About and Teacher sections.</b></p>
           <div class="header" id="myHeader">
+            <marquee direction="right" class="GeneratedMarquee" direction="left" scrollamount="15" behavior="alternate">
           <H1 style="color: rgb(0, 0, 0); text-align: justify;"> About Technology</H1>
+        </marquee>
           </div>
           <p style="color: rgba(170,39,62); text-align: justify; font-size: 100%;">  <b>Technology is the practical application of scientific knowledge to human life's goals, or, as it is sometimes referred to, the modification and manipulation of the human environment. Numerous changes have been brought about by technology in society and its surroundings. Technology has facilitated the growth of a leisure class and helped many nations achieve more developed economies, including the global economy of today. The Earth and its environment suffer from the depletion of natural resources and the production of undesired byproducts, or pollution, from several modern activities.
         </b></p>
@@ -280,7 +284,6 @@
           <img src="Photos/them.png" style="width:200%">
         </div>
 
-        <!-- Next and previous buttons -->
         <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
         <a class="next" onclick="plusSlides(1)">&#10095;</a>
       </div>
