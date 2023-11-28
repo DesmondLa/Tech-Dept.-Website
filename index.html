@@ -174,12 +174,6 @@
       padding: 0;
     }
 
-    .container {
-      width: 80%;
-      margin: 0 auto;
-      max-width: 1200px;
-    }
-
     img {
       max-width: 100%;
       height: auto;
@@ -191,6 +185,131 @@
       line-height:1.3em;
       color:#000000;
       padding:0;
+    }
+
+    .container {
+      background-color: #fff;
+      width: 100%;
+      height: 100%;
+    }
+
+    .content {
+      padding: 20px;
+    }
+
+    p {
+      color: rgba(170, 39, 62);
+      text-align: justify;
+      width: 100%;
+    }
+
+    h1 {
+      color: rgb(252, 251, 251);
+      text-align: justify;
+    }
+
+    @media screen and (max-width: 1000px) {
+      /* Define font sizes for small screens */
+      p {
+        font-size: 12px;
+      }
+
+      h1 {
+        font-size: 24px;
+      }
+    }
+
+    @media screen and (min-width: 1001px) and (max-width: 1540px) {
+      /* Define font sizes for medium screens */
+      p {
+        font-size: 16px;
+      }
+
+      h1 {
+        font-size: 30px;
+      }
+    }
+
+    @media screen and (min-width: 1541px) and (max-width: 1999px) {
+      /* Define font sizes for intermediate screens */
+      p {
+        font-size: 20px;
+      }
+
+      h1 {
+        font-size: 32px;
+      }
+    }
+
+    @media screen and (min-width: 2000px) {
+      /* Define font sizes for large screens */
+      p {
+        font-size: 23px;
+      }
+
+      h1 {
+        font-size: 48px;
+      }
+    }
+
+ table {
+      width: 100%;
+    }
+
+    .slideshow-container {
+      max-width: 100%;
+      margin: auto;
+      overflow: hidden;
+    }
+
+    .mySlides {
+      display: none;
+      width: 100%;
+      height: 100%; /* Set the height of the slide container to 100% */
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: fill; /* Ensure the image fully covers the entire slide */
+    }
+
+    .dots-container {
+      text-align: center;
+    }
+
+    .dot {
+      height: 15px;
+      width: 15px;
+      margin: 0 2px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.6s ease;
+    }
+
+    .prev, .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: auto;
+      margin-top: -22px;
+      padding: 16px;
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+      transition: 0.6s ease;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+    }
+
+    .next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+
+    .prev:hover, .next:hover {
+      background-color: rgba(0, 0, 0, 0.8);
     }
 </style>
 
@@ -229,16 +348,15 @@
 <center> <table style="width:80%; height:100%"> 
   <tr>
     <td style="width:50%">
-      <div class="container" style="background-color: #fff; width:100%; height:100%">
+      <div class="container">
         <div class="content">
-          <p style="color: rgba(170,39,62); text-align: justify; font-size: 100%;"><b>The tech department at All Saints Catholic High School in Ottawa, Ontario, is the department that educates students about overall development in different major skills used in the real world. Find out more about each tech department on the About and Teacher sections.</b></p>
+          <p><b>The tech department at All Saints Catholic High School in Ottawa, Ontario, is the department that educates students about overall development in different major skills used in the real world. Find out more about each tech department on the About and Teacher sections.</b></p>
           <div class="header" id="myHeader">
-            <marquee direction="right" class="GeneratedMarquee" direction="left" scrollamount="15" behavior="alternate">
-          <H1 style="color: rgb(0, 0, 0); text-align: justify;"> About Technology</H1>
-        </marquee>
+            <marquee direction="right" class="GeneratedMarquee" direction="left" scrollamount="15" behavior="alternate" style="color: #000;">
+              <h1 style="color: #000;">About Technology</h1>
+            </marquee>
           </div>
-          <p style="color: rgba(170,39,62); text-align: justify; font-size: 100%;">  <b>Technology is the practical application of scientific knowledge to human life's goals, or, as it is sometimes referred to, the modification and manipulation of the human environment. Numerous changes have been brought about by technology in society and its surroundings. Technology has facilitated the growth of a leisure class and helped many nations achieve more developed economies, including the global economy of today. The Earth and its environment suffer from the depletion of natural resources and the production of undesired byproducts, or pollution, from several modern activities.
-        </b></p>
+          <p><b>Technology is the practical application of scientific knowledge to human life's goals, or, as it is sometimes referred to, the modification and manipulation of the human environment. Numerous changes have been brought about by technology in society and its surroundings. Technology has facilitated the growth of a leisure class and helped many nations achieve more developed economies, including the global economy of today. The Earth and its environment suffer from the depletion of natural resources and the production of undesired byproducts, or pollution, from several modern activities.</b></p>
         </div>
       </div>
     </td>
@@ -311,32 +429,21 @@
 
 
     <script>
-      let slideIndex = 1;
-      showSlides(slideIndex);
+      let slideIndex = 0;
+    showSlides();
 
-      function plusSlides(n) {
-        showSlides(slideIndex += n);
+    function showSlides() {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
       }
-
-      function currentSlide(n) {
-        showSlides(slideIndex = n);
-      }
-
-      function showSlides(n) {
-        let i;
-        let slides = document.getElementsByClassName("mySlides");
-        let dots = document.getElementsByClassName("dot");
-        if (n > slides.length) {slideIndex = 1}
-        if (n < 1) {slideIndex = slides.length}
-        for (i = 0; i < slides.length; i++) {
-          slides[i].style.display = "none";
-        }
-        for (i = 0; i < dots.length; i++) {
-          dots[i].className = dots[i].className.replace(" active", "");
-        }
-        slides[slideIndex-1].style.display = "block";
-        dots[slideIndex-1].className += " active";
-      }
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1}
+      slides[slideIndex-1].style.display = "block";
+      setTimeout(showSlides, 3000); // Change slide every 2 seconds
+    }
+  </script>
     </script>
   </body>
 </html>
